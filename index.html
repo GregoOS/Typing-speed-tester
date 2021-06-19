@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Speed tester</title>
+    <script src="app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            Speed tester
+        </h1>
+    </header>
+    <div id="source"></div>
+    <div class="interaction">
+        <div class="row" id="text-input">
+            <input type="text" name="user-input" id="user-input">
+        </div>
+        <div class="row" id="options">
+            <svg id="previous" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                </svg>
+
+                <svg id="redo" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+
+                <svg id="next" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+        </div>
+    </div>
+    <div class="stats row">
+        <div class="col" id="last">
+            <h3>Last test results</h3>
+            <p>WPM: <span class="wpm"> - </span></p>
+            <p>PPM: <span class="ppm"> - </span></p>
+            <p>Pressed keys: <span class="pressed"> - </span></p>
+            <p>Accuracy: <span class="accuracy"> - </span></p>
+        </div>
+        <div class="col" id="best">
+            <h3>Best results</h3>
+            <p>WPM: <span class="wpm"> - </span></p>
+            <p>PPP: <span class="ppm"> - </span></p>
+            <p>Pressed keys: <span class="pressed"> - </span></p>
+            <p>Accuracy: <span class="accuracy"> - </span></p>
+        </div>
+    </div>
+    <div id="notifications"></div>
+</body>
+</html>
