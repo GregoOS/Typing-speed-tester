@@ -103,7 +103,7 @@ function type(event){
         pressed+=1;
     }
     if(event.key===" "){
-        if(nextWord===uInput.value || " "+nextWord===uInput.value){
+        if(nextWord===uInput.value.trim()){
             correct=correct+ nextWord+" ";
             text=text.substring(nextWord.length+1);
             sourceText.innerHTML=` <span style="background-color:green;color:white;">${correct}</span>` + text;
@@ -143,6 +143,7 @@ function textRepository(i){
 }
 
 function repeat(){
+    window.removeEventListener("keydown", type);
     sourceText.innerHTML=originalText;
     act=false;
 }
